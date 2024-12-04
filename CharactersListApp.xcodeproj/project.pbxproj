@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22721F332CFF992B001F3FF1 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 22721F322CFF992B001F3FF1 /* CombineMoya */; };
+		22721F352CFF992B001F3FF1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 22721F342CFF992B001F3FF1 /* Moya */; };
+		22721F372CFF992B001F3FF1 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 22721F362CFF992B001F3FF1 /* ReactiveMoya */; };
+		22721F392CFF992B001F3FF1 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 22721F382CFF992B001F3FF1 /* RxMoya */; };
+		22721F3C2CFF9A56001F3FF1 /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F3B2CFF9A56001F3FF1 /* MoyaService.swift */; };
+		22721F3E2CFF9A66001F3FF1 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F3D2CFF9A66001F3FF1 /* APIEndpoints.swift */; };
+		22721F402CFF9A80001F3FF1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F3F2CFF9A80001F3FF1 /* NetworkManager.swift */; };
+		22721F552CFF9E2B001F3FF1 /* CharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F542CFF9E2B001F3FF1 /* CharacterResponse.swift */; };
+		22721F572CFF9E91001F3FF1 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F562CFF9E91001F3FF1 /* CharacterListViewModel.swift */; };
+		22721F5D2CFF9FC6001F3FF1 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F5C2CFF9FC6001F3FF1 /* CharacterService.swift */; };
+		22721F662CFFA75D001F3FF1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F652CFFA75D001F3FF1 /* AppCoordinator.swift */; };
+		22721F682CFFA7C3001F3FF1 /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F672CFFA7C3001F3FF1 /* CharacterCoordinator.swift */; };
+		22721F6B2CFFA896001F3FF1 /* CharacterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22721F6A2CFFA896001F3FF1 /* CharacterListViewController.xib */; };
+		22721F6C2CFFA896001F3FF1 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F692CFFA896001F3FF1 /* CharacterListViewController.swift */; };
+		22721F6E2CFFAB87001F3FF1 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F6D2CFFAB87001F3FF1 /* FilterView.swift */; };
+		22721F722CFFF58C001F3FF1 /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F712CFFF58C001F3FF1 /* CharacterCard.swift */; };
+		22721F742CFFFD7D001F3FF1 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F732CFFFD7D001F3FF1 /* CharacterDetailsView.swift */; };
+		22721F762CFFFD96001F3FF1 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F752CFFFD96001F3FF1 /* CharacterDetailsViewModel.swift */; };
+		22721F782D00002C001F3FF1 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F772D00002C001F3FF1 /* DetailsCoordinator.swift */; };
+		22721F7B2D0106C6001F3FF1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22721F7A2D0106C6001F3FF1 /* Utilities.swift */; };
 		22F5CA9C2CFF94CE00EDE9A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5CA9B2CFF94CE00EDE9A7 /* AppDelegate.swift */; };
 		22F5CA9E2CFF94CE00EDE9A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5CA9D2CFF94CE00EDE9A7 /* SceneDelegate.swift */; };
 		22F5CAA02CFF94CE00EDE9A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5CA9F2CFF94CE00EDE9A7 /* ViewController.swift */; };
@@ -36,6 +56,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22721F3B2CFF9A56001F3FF1 /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
+		22721F3D2CFF9A66001F3FF1 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		22721F3F2CFF9A80001F3FF1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		22721F542CFF9E2B001F3FF1 /* CharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponse.swift; sourceTree = "<group>"; };
+		22721F562CFF9E91001F3FF1 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		22721F5C2CFF9FC6001F3FF1 /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
+		22721F652CFFA75D001F3FF1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		22721F672CFFA7C3001F3FF1 /* CharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
+		22721F692CFFA896001F3FF1 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		22721F6A2CFFA896001F3FF1 /* CharacterListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterListViewController.xib; sourceTree = "<group>"; };
+		22721F6D2CFFAB87001F3FF1 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		22721F712CFFF58C001F3FF1 /* CharacterCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
+		22721F732CFFFD7D001F3FF1 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
+		22721F752CFFFD96001F3FF1 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
+		22721F772D00002C001F3FF1 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		22721F7A2D0106C6001F3FF1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		22F5CA982CFF94CE00EDE9A7 /* CharactersListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharactersListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F5CA9B2CFF94CE00EDE9A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F5CA9D2CFF94CE00EDE9A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22721F352CFF992B001F3FF1 /* Moya in Frameworks */,
+				22721F332CFF992B001F3FF1 /* CombineMoya in Frameworks */,
+				22721F392CFF992B001F3FF1 /* RxMoya in Frameworks */,
+				22721F372CFF992B001F3FF1 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +116,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22721F3A2CFF99FB001F3FF1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				22721F3B2CFF9A56001F3FF1 /* MoyaService.swift */,
+				22721F3D2CFF9A66001F3FF1 /* APIEndpoints.swift */,
+				22721F3F2CFF9A80001F3FF1 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		22721F412CFF9B3A001F3FF1 /* Characterslist */ = {
+			isa = PBXGroup;
+			children = (
+				22721F452CFF9C53001F3FF1 /* Views */,
+				22721F542CFF9E2B001F3FF1 /* CharacterResponse.swift */,
+				22721F562CFF9E91001F3FF1 /* CharacterListViewModel.swift */,
+				22721F672CFFA7C3001F3FF1 /* CharacterCoordinator.swift */,
+			);
+			path = Characterslist;
+			sourceTree = "<group>";
+		};
+		22721F422CFF9B56001F3FF1 /* CharacterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				22721F732CFFFD7D001F3FF1 /* CharacterDetailsView.swift */,
+				22721F752CFFFD96001F3FF1 /* CharacterDetailsViewModel.swift */,
+				22721F772D00002C001F3FF1 /* DetailsCoordinator.swift */,
+			);
+			path = CharacterDetails;
+			sourceTree = "<group>";
+		};
+		22721F432CFF9B7B001F3FF1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22F5CA9B2CFF94CE00EDE9A7 /* AppDelegate.swift */,
+				22F5CA9D2CFF94CE00EDE9A7 /* SceneDelegate.swift */,
+				22721F652CFFA75D001F3FF1 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22721F442CFF9BFB001F3FF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22F5CAA42CFF94CF00EDE9A7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		22721F452CFF9C53001F3FF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22721F602CFFA5D7001F3FF1 /* Cells */,
+				22721F692CFFA896001F3FF1 /* CharacterListViewController.swift */,
+				22721F6A2CFFA896001F3FF1 /* CharacterListViewController.xib */,
+				22721F6D2CFFAB87001F3FF1 /* FilterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22721F5B2CFF9FB3001F3FF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				22721F5C2CFF9FC6001F3FF1 /* CharacterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		22721F602CFFA5D7001F3FF1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22721F712CFFF58C001F3FF1 /* CharacterCard.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		22721F792D0106AF001F3FF1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				22721F7A2D0106C6001F3FF1 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		22F5CA8F2CFF94CE00EDE9A7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +223,15 @@
 		22F5CA9A2CFF94CE00EDE9A7 /* CharactersListApp */ = {
 			isa = PBXGroup;
 			children = (
-				22F5CA9B2CFF94CE00EDE9A7 /* AppDelegate.swift */,
-				22F5CA9D2CFF94CE00EDE9A7 /* SceneDelegate.swift */,
+				22721F792D0106AF001F3FF1 /* Utilities */,
+				22721F5B2CFF9FB3001F3FF1 /* Services */,
+				22721F442CFF9BFB001F3FF1 /* Resources */,
+				22721F432CFF9B7B001F3FF1 /* App */,
+				22721F422CFF9B56001F3FF1 /* CharacterDetails */,
+				22721F412CFF9B3A001F3FF1 /* Characterslist */,
+				22721F3A2CFF99FB001F3FF1 /* Networking */,
 				22F5CA9F2CFF94CE00EDE9A7 /* ViewController.swift */,
 				22F5CAA12CFF94CE00EDE9A7 /* Main.storyboard */,
-				22F5CAA42CFF94CF00EDE9A7 /* Assets.xcassets */,
 				22F5CAA62CFF94CF00EDE9A7 /* LaunchScreen.storyboard */,
 				22F5CAA92CFF94CF00EDE9A7 /* Info.plist */,
 			);
@@ -143,6 +271,12 @@
 			dependencies = (
 			);
 			name = CharactersListApp;
+			packageProductDependencies = (
+				22721F322CFF992B001F3FF1 /* CombineMoya */,
+				22721F342CFF992B001F3FF1 /* Moya */,
+				22721F362CFF992B001F3FF1 /* ReactiveMoya */,
+				22721F382CFF992B001F3FF1 /* RxMoya */,
+			);
 			productName = CharactersListApp;
 			productReference = 22F5CA982CFF94CE00EDE9A7 /* CharactersListApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +349,9 @@
 				Base,
 			);
 			mainGroup = 22F5CA8F2CFF94CE00EDE9A7;
+			packageReferences = (
+				22721F312CFF992B001F3FF1 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 22F5CA992CFF94CE00EDE9A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22721F6B2CFFA896001F3FF1 /* CharacterListViewController.xib in Resources */,
 				22F5CAA52CFF94CF00EDE9A7 /* Assets.xcassets in Resources */,
 				22F5CAA82CFF94CF00EDE9A7 /* Base in Resources */,
 				22F5CAA32CFF94CE00EDE9A7 /* Base in Resources */,
@@ -258,9 +396,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22721F6E2CFFAB87001F3FF1 /* FilterView.swift in Sources */,
+				22721F662CFFA75D001F3FF1 /* AppCoordinator.swift in Sources */,
+				22721F402CFF9A80001F3FF1 /* NetworkManager.swift in Sources */,
+				22721F682CFFA7C3001F3FF1 /* CharacterCoordinator.swift in Sources */,
+				22721F3E2CFF9A66001F3FF1 /* APIEndpoints.swift in Sources */,
+				22721F552CFF9E2B001F3FF1 /* CharacterResponse.swift in Sources */,
+				22721F7B2D0106C6001F3FF1 /* Utilities.swift in Sources */,
+				22721F782D00002C001F3FF1 /* DetailsCoordinator.swift in Sources */,
 				22F5CAA02CFF94CE00EDE9A7 /* ViewController.swift in Sources */,
+				22721F722CFFF58C001F3FF1 /* CharacterCard.swift in Sources */,
+				22721F742CFFFD7D001F3FF1 /* CharacterDetailsView.swift in Sources */,
+				22721F762CFFFD96001F3FF1 /* CharacterDetailsViewModel.swift in Sources */,
+				22721F572CFF9E91001F3FF1 /* CharacterListViewModel.swift in Sources */,
 				22F5CA9C2CFF94CE00EDE9A7 /* AppDelegate.swift in Sources */,
+				22721F6C2CFFA896001F3FF1 /* CharacterListViewController.swift in Sources */,
+				22721F5D2CFF9FC6001F3FF1 /* CharacterService.swift in Sources */,
 				22F5CA9E2CFF94CE00EDE9A7 /* SceneDelegate.swift in Sources */,
+				22721F3C2CFF9A56001F3FF1 /* MoyaService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +760,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22721F312CFF992B001F3FF1 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22721F322CFF992B001F3FF1 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22721F312CFF992B001F3FF1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		22721F342CFF992B001F3FF1 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22721F312CFF992B001F3FF1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		22721F362CFF992B001F3FF1 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22721F312CFF992B001F3FF1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		22721F382CFF992B001F3FF1 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22721F312CFF992B001F3FF1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22F5CA902CFF94CE00EDE9A7 /* Project object */;
 }
