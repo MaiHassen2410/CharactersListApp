@@ -21,6 +21,7 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        
+        let characterCoordinator = CharacterCoordinator(navigationController: navigationController)
+        characterCoordinator.start()
     }
 }
