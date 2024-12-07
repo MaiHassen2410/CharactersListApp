@@ -11,13 +11,12 @@ import Foundation
 import Combine
 
 class CharacterListViewModel: ObservableObject {
-    private let service: RickAndMortyService
     private var cancellables: Set<AnyCancellable> = []
-    
+    private let service: RickAndMortyServiceProtocol
     @Published var characters: [Character] = []
     @Published var filteredCharacters: [Character] = []
     @Published var selectedFilter: CharacterStatus = .all
-
+    @Published var errorMessage: String? = nil
     // A Combine subject for character selection
     let characterSelected = PassthroughSubject<Character, Never>()
     
@@ -33,7 +32,7 @@ class CharacterListViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
-                    print("Error fetching characters: \(error)")
+                    self.errorMessage = "Error fetching characters: \(error.localizedDescription)"
                 }
             }, receiveValue: { [weak self] response in
                 guard let self = self else { return }
@@ -48,19 +47,15 @@ class CharacterListViewModel: ObservableObject {
         $selectedFilter
             .combineLatest($characters)
             .map { filter, allCharacters in
-                switch filter {
-                case .all:
-                    return allCharacters
-                default:
-                    return allCharacters.filter { $0.status.lowercased() == filter.rawValue.lowercased() }
+                guard filter != .all else { return allCharacters }
+                return allCharacters.filter { $0.status.caseInsensitiveCompare(filter.rawValue) == .orderedSame }
                 }
-            }
             .assign(to: &$filteredCharacters)
     }
 
     private func updateFilteredCharacters() {
         filteredCharacters = characters.filter {
-            selectedFilter == .all || $0.status.lowercased() == selectedFilter.rawValue.lowercased()
+            selectedFilter == .all || $0.status.caseInsensitiveCompare(selectedFilter.rawValue) == .orderedSame
         }
     }
 

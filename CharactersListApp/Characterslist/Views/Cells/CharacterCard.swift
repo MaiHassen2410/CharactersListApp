@@ -52,6 +52,7 @@ struct CharacterCard: View {
                 .shadow(radius: 8)
                 .padding()
         )
+      
     }
 
 

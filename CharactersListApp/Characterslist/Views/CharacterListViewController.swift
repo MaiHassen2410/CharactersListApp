@@ -14,11 +14,11 @@ class CharacterListViewController: UIViewController {
     @IBOutlet weak var filterContainerView: UIView!
 
     private let viewModel: CharacterListViewModel
-    private let coordinator: DetailsCoordinator 
+    private let coordinator: Coordinator
     private var filterViewHostingController: UIHostingController<FilterView>?
     private var cancellables: Set<AnyCancellable> = []
 
-    init(viewModel: CharacterListViewModel, coordinator: DetailsCoordinator) {
+    init(viewModel: CharacterListViewModel, coordinator: Coordinator) {
         self.viewModel = viewModel
         self.coordinator = coordinator
         super.init(nibName: "CharacterListViewController", bundle: nil)
@@ -33,7 +33,7 @@ class CharacterListViewController: UIViewController {
         bindViewModel()
         viewModel.fetchCharacters()
     }
-
+    
 
     private func setupFilterView() {
         let filterView = FilterView(viewModel: viewModel)
@@ -56,12 +56,18 @@ class CharacterListViewController: UIViewController {
         
         // Navigate to details when a character is selected
         viewModel.characterSelected
-            .sink { [weak self] character in
-                self?.coordinator.start(with: character) // Delegate navigation to coordinator
-            }
-            .store(in: &cancellables)
+                  .sink { [weak self] character in
+                      guard let coordinator = self?.coordinator as? CharacterCoordinator else { return }
+                      coordinator.openDetails(for: character)
+                  }
+                  .store(in: &cancellables)
+        
     }
+
+
+
 }
+
 
 extension CharacterListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -105,6 +111,7 @@ extension CharacterListViewController: UITableViewDataSource {
 
         return cell
     }
+    
 }
 
 

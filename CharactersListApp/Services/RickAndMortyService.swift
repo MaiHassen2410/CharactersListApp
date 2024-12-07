@@ -9,17 +9,18 @@ import Foundation
 import Moya
 import Combine
 
-class RickAndMortyService {
+ protocol RickAndMortyServiceProtocol {
+    func fetchCharacters(page: Int) -> AnyPublisher<ResponseWrapper<Character>, Error>
+}
+
+// RickAndMortyService.swift
+ class RickAndMortyService: RickAndMortyServiceProtocol {
     private let provider: MoyaProvider<RickAndMortyAPI>
     
-    // Initializer to inject provider (can be mocked for testing)
     init(provider: MoyaProvider<RickAndMortyAPI> = MoyaProvider<RickAndMortyAPI>()) {
         self.provider = provider
     }
 
-    /// Fetch characters from the API
-    /// - Parameter page: The page number to fetch
-    /// - Returns: A `Publisher` that emits `ResponseWrapper<Character>` or an error
     func fetchCharacters(page: Int) -> AnyPublisher<ResponseWrapper<Character>, Error> {
         return Future { [weak self] promise in
             guard let self = self else {
@@ -44,6 +45,3 @@ class RickAndMortyService {
         .eraseToAnyPublisher()
     }
 }
-
-
-
