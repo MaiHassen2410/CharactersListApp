@@ -24,7 +24,7 @@ class CharacterListViewModel: ObservableObject {
 
     let characterSelected = PassthroughSubject<Character, Never>()
 
-    init(service: RickAndMortyService) {
+    init(service: RickAndMortyServiceProtocol) {
         self.service = service
         bindFilterToCharacters()
     }
