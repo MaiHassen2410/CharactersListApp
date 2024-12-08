@@ -13,14 +13,16 @@ import Combine
 class CharacterListViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let service: RickAndMortyServiceProtocol
+    private var currentPage = 1
+    private var networkManager = NetworkManager.shared
+
     @Published var characters: [Character] = []
     @Published var filteredCharacters: [Character] = []
-    @Published var selectedFilter: CharacterStatus = .all
+    @Published var selectedFilter: CharacterStatus = .all 
     @Published var errorMessage: String? = nil
-    // A Combine subject for character selection
+    @Published var isLoading: Bool = false
+
     let characterSelected = PassthroughSubject<Character, Never>()
-    
-    private var currentPage = 1
 
     init(service: RickAndMortyService) {
         self.service = service
@@ -30,7 +32,10 @@ class CharacterListViewModel: ObservableObject {
     func fetchCharacters() {
         service.fetchCharacters(page: currentPage)
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
+                guard let self = self else { return }
+                self.isLoading = false
+
                 if case .failure(let error) = completion {
                     self.errorMessage = "Error fetching characters: \(error.localizedDescription)"
                 }
@@ -49,7 +54,7 @@ class CharacterListViewModel: ObservableObject {
             .map { filter, allCharacters in
                 guard filter != .all else { return allCharacters }
                 return allCharacters.filter { $0.status.caseInsensitiveCompare(filter.rawValue) == .orderedSame }
-                }
+            }
             .assign(to: &$filteredCharacters)
     }
 
@@ -58,5 +63,5 @@ class CharacterListViewModel: ObservableObject {
             selectedFilter == .all || $0.status.caseInsensitiveCompare(selectedFilter.rawValue) == .orderedSame
         }
     }
-
 }
+

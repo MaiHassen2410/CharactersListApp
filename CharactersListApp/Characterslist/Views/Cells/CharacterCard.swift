@@ -25,19 +25,19 @@ struct CharacterCard: View {
             }
             .frame(width: 85, height: 85)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color.darkBlue, lineWidth: 2))
+            .overlay(Circle().stroke(Color.accentColor, lineWidth: 2))
 
             // Character Text Info
             VStack(alignment: .leading, spacing: 8) {
                 Text(character.name)
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(.darkBlue)
+                    .foregroundColor(.accentColor)
                     .lineLimit(1)
 
                 Text(character.species)
                     .font(.subheadline)
-                    .foregroundColor(.darkBlue)
+                    .foregroundColor(.accentColor)
             }
 
             Spacer()

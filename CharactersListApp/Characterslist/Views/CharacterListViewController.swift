@@ -62,6 +62,16 @@ class CharacterListViewController: UIViewController {
                   }
                   .store(in: &cancellables)
         
+        viewModel.$selectedFilter
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                
+                if self?.viewModel.filteredCharacters.count ?? 0 > 0 {
+                    self?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+                }
+            }
+            .store(in: &cancellables)
+      
     }
 
 
