@@ -15,7 +15,7 @@ class DetailsCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     private var cancellables = Set<AnyCancellable>()
 
-    /// Publisher to notify when this coordinator is finished
+    //Publisher to notify when this coordinator is finished
      let completionPublisher = PassthroughSubject<Void, Never>()
 
     init(navigationController: UINavigationController) {

@@ -115,7 +115,6 @@ extension CharacterListViewController: UITableViewDataSource {
             hostingController.view.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
         ])
 
-        // Make sure the cell itself is selectable
         cell.selectionStyle = .default
         cell.isUserInteractionEnabled = true
 

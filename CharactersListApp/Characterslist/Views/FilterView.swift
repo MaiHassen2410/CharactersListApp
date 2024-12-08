@@ -47,21 +47,21 @@ struct FilterButton: View {
         Button(action: action) {
             Text(title)
                 .font(.headline)
-                .foregroundColor(isSelected ? .white : .accentColor) // White text for selected, gray for unselected
+                .foregroundColor(isSelected ? .white : .accentColor)
                 .padding(.vertical, 10)
                 .padding(.horizontal, 15)
-                .background(isSelected ? Color.accentColor : Color.white) // Purple when selected, white when not
-                .cornerRadius(cornerRadius) // Dynamic corner radius
-                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2) // Shadow for 3D effect
-                .scaleEffect(isSelected ? 1.05 : 1.0) // Slight scaling effect when selected
-                .animation(.easeInOut(duration: 0.2), value: isSelected) // Smooth animation for selection change
+                .background(isSelected ? Color.accentColor : Color.white)
+                .cornerRadius(cornerRadius)
+                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                .scaleEffect(isSelected ? 1.05 : 1.0)
+                .animation(.easeInOut(duration: 0.2), value: isSelected)  
                 .overlay( // Add border with rounded corners
                     RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(Color.accentColor, lineWidth: 1) // Border color
+                        .stroke(Color.accentColor, lineWidth: 1)
                 )
         }
         .buttonStyle(PlainButtonStyle()) // Disable the default button styling
-        .frame(height: 40) // Set a fixed height for the button
+        .frame(height: 40)
 
     }
 }

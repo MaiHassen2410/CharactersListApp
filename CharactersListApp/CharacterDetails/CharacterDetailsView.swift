@@ -37,24 +37,7 @@ struct CharacterDetailView: View {
             .padding(.horizontal)
 
             // Name and Status in a Row
-            HStack () {
-                Text(viewModel.character.name)
-                    .font(.system(size: 28, weight: .bold))
-                    .foregroundColor(.black)
-                
-            Spacer()
-                
-                Text(viewModel.character.status)
-                    .font(.subheadline)
-                    .foregroundColor(.black)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Utilities.shared.getBackgroundColor(for: viewModel.character.status))
-                    )
-            }
-            .padding(.horizontal)
+            nameAndStatusRow
 
             // Species and Gender
             Text("\(viewModel.character.species) • \(viewModel.character.gender)")
@@ -63,19 +46,7 @@ struct CharacterDetailView: View {
                 .padding(.horizontal)
 
             // Location Row
-            HStack {
-                Text("Location:")
-                    .font(.headline)
-                    .foregroundColor(.black)
-
-               
-
-                Text("Earth") // Replace with actual location data if available
-                    .font(.body)
-                    .foregroundColor(.gray)
-            }
-            .padding(.horizontal)
-
+            locationRow
             Spacer()
         }
         .padding(.top)
@@ -84,8 +55,40 @@ struct CharacterDetailView: View {
         
         }
    
+    var nameAndStatusRow: some View {
+        HStack () {
+            Text(viewModel.character.name)
+                .font(.system(size: 28, weight: .bold))
+                .foregroundColor(.black)
+            
+        Spacer()
+            
+            Text(viewModel.character.status)
+                .font(.subheadline)
+                .foregroundColor(.black)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Utilities.shared.getBackgroundColor(for: viewModel.character.status))
+                )
+        }
+        .padding(.horizontal)
+    }
     
-    
-    
+    var locationRow: some View {
+        HStack {
+            Text("Location:")
+                .font(.headline)
+                .foregroundColor(.black)
+
+           
+
+            Text("Earth") // Replace with actual location data if available
+                .font(.body)
+                .foregroundColor(.gray)
+        }
+        .padding(.horizontal)
+    }
     
 }
